@@ -1,0 +1,8 @@
+log
+TODO
+locks
+*.gem
+*.log
+*.pid
+Gemfile.lock
+.bundle
