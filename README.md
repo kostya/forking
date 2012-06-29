@@ -7,7 +7,7 @@ Simple processes forking, and restarting. Master process starts as daemon.
     $ gem install forking
 
 
-Example 1.rb:
+Example 1.rb (run 5 child processes and capturing logs):
 
 ```ruby
 #!/usr/bin/env ruby
@@ -27,7 +27,6 @@ end
 
 2.times do |i|
   f.spawn(:name => "test1", :log_file => "test1.log") do
-    $0 = "test1 #{i}"
     loop do
       puts "test1 #{i}"
       sleep 1
@@ -37,7 +36,7 @@ end
 
 3.times do |i|
   f.spawn(:log_file => "test2.log", :sync_log => true) do
-    exec 'ruby', '2.rb', '--test', 'some_value'
+    exec 'ruby', '2.rb', '--test'
   end
 end
 
