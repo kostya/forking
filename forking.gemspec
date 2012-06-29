@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
 
   s.authors = ["Makarchev Konstantin"]
  
-  s.description = %q{}
-  s.summary = %q{}
+  s.description = %q{Simple processes forking, and restarting. Master process starts as daemon.}
+  s.summary = %q{Simple processes forking, and restarting. Master process starts as daemon.}
 
   s.email = %q{kostya27@gmail.com}
   s.homepage = %q{http://github.com/kostya/forking}
