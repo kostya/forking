@@ -18,7 +18,7 @@ class Forking
 
   def run!
     $0 = "#{@opts[:name]} spawner" unless @opts[:dont_touch_pl]
-    DaemonSpawnBase.spawn!(@opts.merge(:procs => @procs, :before_fork => @before_fork))
+    DaemonSpawnBase.spawn!(@opts.merge(:procs => @procs, :before_fork => @before_fork, :application => @opts[:name]))
   end
 
   def spawn(opts = {}, &block)
